@@ -1,0 +1,130 @@
+.id{
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;    
+}
+
+
+
+  .search-container {
+    float: right;
+    margin-top: 2px;
+    max-height: fit-content;
+    
+}
+
+.font
+{
+  text-align: left;
+  text-shadow: 0ch;
+   text-decoration: solid;
+   margin-left:20px;
+}
+
+.font1
+{
+  text-align: left;
+  text-shadow: 0ch; 
+  text-decoration: solid;
+  margin-left:10px;
+}
+
+.font2
+{
+  text-align: left;
+  text-shadow: 0ch;
+   text-decoration: solid;
+   margin-left:400px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 8px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content .dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content .dropdown2-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  z-index: 1;
+  left: 100%;
+  top: 0;
+}
+
+.dropdown-content .dropdown2:hover .dropdown2-content {
+  display: block;
+}
+
+.id5
+{
+ padding: 20px;
+ color:rgb(26, 35, 28);
+ padding-top: green;
+ font-size: 20px;
+ text-align: center;
+}
+
+
+
+footer{
+	background-color: rgba(245, 138, 51, 0.566);
+  height:200px;
+}
+
+
+#brand-logo{
+	height: 60px;
+}
+
+#brand-img{
+	height: 50px;
+}
+
+#main_img{
+	height: 300px;
+	width: 250px;
+	
+}
+
+#header_bg{
+	background-color: #AA1945;
+}
+
+#content_bg{
+	background-color: #FADCD9;
+}
+
+
+
