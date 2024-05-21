@@ -1,0 +1,14 @@
+{% extends 'web.htm' %}
+
+{% block content %}
+    <h1 style="color: rgb(153, 255, 0);">Search Results for "{{ query }}"</h1>
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li style="color: green;">{{ result.Courses }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p style="color: red;">No results found.</p>
+    {% endif %}
+{% endblock %}

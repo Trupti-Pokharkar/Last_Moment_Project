@@ -1,0 +1,476 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computer 2nd 1st sem</title>
+    <link rel="stylesheet" href="{% static 'sem21.css'%}">
+    <style>
+   a:link {
+    color: black;
+  }
+
+a:visited {
+    color: rgb(4, 15, 4);
+}
+
+  a:hover {
+    color: rgb(209, 204, 219);
+  }
+
+  a:active {
+    color: rgb(42, 42, 186);
+     }
+
+     .popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #120404d8;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+        </style>
+</head>
+<body>
+
+    <nav class="id" >
+        <img src="{% static 'pagelogo.jpg'%}" style="float:left" width="30px" heigth="10px">
+        <a class="font" href="/" >Home</a>
+        <div class="dropdown">
+            <a class="font1" href="#">Courses</a>
+            <div class="dropdown-content">
+                <div class="dropdown2">
+                    <a href="#" style="text-decoration: solid;">Computer</a>
+                    <div class="dropdown2-content">
+                        <a href="./sem21.htm" style="text-decoration: solid;">2nd Year(sem1)</a>
+                        <a href="./sem22.htm" style="text-decoration: solid;">2nd Year(sem2)</a>
+                        <a href="./sem31.htm" style="text-decoration: solid;">3rd Year(sem1)</a>
+                        <a href="./sem32.htm" style="text-decoration: solid;">3rd Year(sem2)</a>
+                        <a href="./sem41.htm" style="text-decoration: solid;">4th Year(sem1)</a>
+                        <a href="./sem42.htm" style="text-decoration: solid;">4th Year(sem2)</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown2">
+                    <a href="#" style="text-decoration: solid;">IT</a>
+                    <div class="dropdown2-content">
+                        <a href="./semi21.htm" style="text-decoration: solid;">2nd Year(sem1)</a>
+                        <a href="./semi22.htm" style="text-decoration: solid;">2nd Year(sem2)</a>
+                        <a href="./semi31.htm" style="text-decoration: solid;">3rd Year(sem1)</a>
+                        <a href="./semi32.htm" style="text-decoration: solid;">3rd Year(sem2)</a>
+                        <a href="./semi41.htm" style="text-decoration: solid;">4th Year(sem1)</a>
+                        <a href="./semi42.htm" style="text-decoration: solid;">4th Year(sem2)</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown2">
+                    <a href="#" style="text-decoration: solid;">E&TC</a>
+                    <div class="dropdown2-content">
+                        <a href="seme21.htm" style="text-decoration: solid;">2nd Year(sem1)</a>
+                        <a href="seme22.htm" style="text-decoration: solid;">2nd Year(sem2)</a>
+                        <a href="seme31.htm" style="text-decoration: solid;">3rd Year(sem1)</a>
+                        <a href="seme32.htm" style="text-decoration: solid;">3rd Year(sem2)</a>
+                        <a href="seme41.htm" style="text-decoration: solid;">4th Year(sem1)</a>
+                        <a href="seme42.htm" style="text-decoration: solid;">4th Year(sem2)</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="dropdown2">
+                    <a href="#" style="text-decoration: solid;">First Year</a>
+                    <div class="dropdown2-content">
+                        <a href="./first.htm" style="text-decoration: solid;">First Year</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <a  class ="font1" href="about.htm" >About us</a>  
+    </nav>
+<div>
+    <h3>Sem-1</h3>
+    <table>
+    <tr>
+     <th>Sr No</th>
+     <th>Course Name</th>
+     <th>Downloads</th>
+     <tr>
+
+    <tr>
+    <th>1</th>
+    <th>Digital Communication</th>
+    <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Technical Publication</td>
+        <td>
+            <a href="DM - Technical.pdf">
+            <img src="{% static 'downbutton.jpg'%}" width="110px" height="40px">
+        </a>
+        </td>
+            
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>TechKnowledge Publication</td>
+        <td>
+            {% if user.is_authenticated %}
+                <a href="{% static 'DM - Technical.pdf' %}" download>
+                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                </a>
+            {% else %}
+            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                <span class="popuptext" id="myPopup">For Download Login</span>
+            {% endif %}
+            </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Tech-Neo Publication</td>
+        <td>
+            {% if user.is_authenticated %}
+                <a href="{% static 'DM - Technical.pdf' %}" download>
+                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                </a>
+            {% else %}
+            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                <span class="popuptext" id="myPopup">For Download Login</span>
+            {% endif %}
+            </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Decode</td>
+        <td>
+            {% if user.is_authenticated %}
+                <a href="{% static 'DM - Technical.pdf' %}" download>
+                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                </a>
+            {% else %}
+            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                <span class="popuptext" id="myPopup">For Download Login</span>
+            {% endif %}
+            </td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>Electromagnetic Field Theory</th>
+        <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Technical Publication</td>
+            <td>
+                {% if user.is_authenticated %}
+                    <a href="{% static 'DM - Technical.pdf' %}" download>
+                        <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    </a>
+                {% else %}
+                <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    <span class="popuptext" id="myPopup">For Download Login</span>
+                {% endif %}
+                </td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>TechKnowledge Publication</td>
+            <td>
+                {% if user.is_authenticated %}
+                    <a href="{% static 'DM - Technical.pdf' %}" download>
+                        <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    </a>
+                {% else %}
+                <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    <span class="popuptext" id="myPopup">For Download Login</span>
+                {% endif %}
+                </td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Tech-Neo Publication</td>
+            <td>
+                {% if user.is_authenticated %}
+                    <a href="{% static 'DM - Technical.pdf' %}" download>
+                        <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    </a>
+                {% else %}
+                <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    <span class="popuptext" id="myPopup">For Download Login</span>
+                {% endif %}
+                </td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td>Decode</td>
+            <td>
+                {% if user.is_authenticated %}
+                    <a href="{% static 'DM - Technical.pdf' %}" download>
+                        <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    </a>
+                {% else %}
+                <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                    <span class="popuptext" id="myPopup">For Download Login</span>
+                {% endif %}
+                </td>
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>Database Management</th>
+            <td></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>Technical Publication</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% static 'DM - Technical.pdf' %}" download>
+                            <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        </a>
+                    {% else %}
+                    <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        <span class="popuptext" id="myPopup">For Download Login</span>
+                    {% endif %}
+                    </td>
+            </tr>
+        
+            <tr>
+                <td></td>
+                <td>TechKnowledge Publication</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% static 'DM - Technical.pdf' %}" download>
+                            <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        </a>
+                    {% else %}
+                    <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        <span class="popuptext" id="myPopup">For Download Login</span>
+                    {% endif %}
+                    </td>
+            </tr>
+        
+            <tr>
+                <td></td>
+                <td>Tech-Neo Publication</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% static 'DM - Technical.pdf' %}" download>
+                            <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        </a>
+                    {% else %}
+                    <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        <span class="popuptext" id="myPopup">For Download Login</span>
+                    {% endif %}
+                    </td>
+            </tr>
+        
+            <tr>
+                <td></td>
+                <td>Decode</td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% static 'DM - Technical.pdf' %}" download>
+                            <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        </a>
+                    {% else %}
+                    <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                        <span class="popuptext" id="myPopup">For Download Login</span>
+                    {% endif %}
+                    </td>
+            </tr>
+
+            <tr>
+                <th>4</th>
+                <th>Microcontrollers</th>
+                <td></td>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                    <td>Technical Publication</td>
+                    <td>
+                        {% if user.is_authenticated %}
+                            <a href="{% static 'DM - Technical.pdf' %}" download>
+                                <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            </a>
+                        {% else %}
+                        <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            <span class="popuptext" id="myPopup">For Download Login</span>
+                        {% endif %}
+                        </td>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                    <td>TechKnowledge Publication</td>
+                    <td>
+                        {% if user.is_authenticated %}
+                            <a href="{% static 'DM - Technical.pdf' %}" download>
+                                <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            </a>
+                        {% else %}
+                        <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            <span class="popuptext" id="myPopup">For Download Login</span>
+                        {% endif %}
+                        </td>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                    <td>Tech-Neo Publication</td>
+                    <td>
+                        {% if user.is_authenticated %}
+                            <a href="{% static 'DM - Technical.pdf' %}" download>
+                                <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            </a>
+                        {% else %}
+                        <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            <span class="popuptext" id="myPopup">For Download Login</span>
+                        {% endif %}
+                        </td>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                    <td>Decode</td>
+                    <td>
+                        {% if user.is_authenticated %}
+                            <a href="{% static 'DM - Technical.pdf' %}" download>
+                                <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            </a>
+                        {% else %}
+                        <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                            <span class="popuptext" id="myPopup">For Download Login</span>
+                        {% endif %}
+                        </td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>Digital Signal Processing</th>
+                    <td></td>
+                    </tr>
+                   
+                    <tr>
+                        <td></td>
+                        <td>Technical Publication</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                                <a href="{% static 'DM - Technical.pdf' %}" download>
+                                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                </a>
+                            {% else %}
+                            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                <span class="popuptext" id="myPopup">For Download Login</span>
+                            {% endif %}
+                            </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td>TechKnowledge Publication</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                                <a href="{% static 'DM - Technical.pdf' %}" download>
+                                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                </a>
+                            {% else %}
+                            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                <span class="popuptext" id="myPopup">For Download Login</span>
+                            {% endif %}
+                            </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td>Tech-Neo Publication</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                                <a href="{% static 'DM - Technical.pdf' %}" download>
+                                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                </a>
+                            {% else %}
+                            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                <span class="popuptext" id="myPopup">For Download Login</span>
+                            {% endif %}
+                            </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td>Decode</td>
+                        <td>
+                            {% if user.is_authenticated %}
+                                <a href="{% static 'DM - Technical.pdf' %}" download>
+                                    <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                </a>
+                            {% else %}
+                            <div class="popup" onclick="myFunction()"> <img src="{% static 'downbutton.jpg' %}" width="110px" height="40px">
+                                <span class="popuptext" id="myPopup">For Download Login</span>
+                            {% endif %}
+                            </td>
+                    </tr>
+    </table>
+</div>
+<script>
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+</body>
+</html>
