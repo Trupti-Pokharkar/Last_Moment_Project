@@ -1,0 +1,129 @@
+.font{
+    float: left;
+    margin-left: 20px; 
+    font-size: 25px;
+}
+
+.login
+{
+         background-color: rgba(194, 111, 111, 0.437);
+            width: 300px;
+            border: 5px solid rgb(14, 18, 14);
+            padding: 10px;
+            margin: 50px 300px 150px 450px;
+            text-align: center;
+            height: 70vh;
+            font-size: 30px;
+
+}
+
+.submit
+{
+    background-color: rgb(120, 211, 120);
+    font-weight: 200px; 
+    font-size: 20px;
+}
+
+.infont
+{
+    font-size: 20px;
+}
+
+body
+{
+    background-image: url('loginback.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.font
+{
+  text-align: left;
+  text-shadow: 0ch;
+   text-decoration: solid;
+   margin-left:20px;
+}
+
+.font1
+{
+  text-align: left;
+  text-shadow: 0ch; 
+  text-decoration: solid;
+  margin-left:10px;
+}
+
+.font2
+{
+  text-align: left;
+  text-shadow: 0ch;
+   text-decoration: solid;
+   margin-left:400px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 8px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content .dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content .dropdown2-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  z-index: 1;
+  left: 100%;
+  top: 0;
+}
+
+.dropdown-content .dropdown2:hover .dropdown2-content {
+  display: block;
+}
+
+.id{
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+    
+}
+
+
+  .search-container {
+    float: right;
+    margin-top: 2px;
+    max-height: fit-content;
+    
+}
+
